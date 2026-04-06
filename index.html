@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TENDER GUIDER</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
+    header { background:#004080; color:white; padding:20px; text-align:center; }
+    nav { background:#ff9933; padding:10px; text-align:center; }
+    nav a { margin:0 15px; text-decoration:none; color:white; font-weight:bold; }
+    .banner { padding:40px; text-align:center; background:#e6f2ff; }
+    .banner h2 { margin:0; color:#004080; }
+    .banner p { margin:10px 0; }
+    .search { margin-top:20px; }
+    .search select, .search input { padding:8px; margin:5px; }
+    .search button { padding:8px 15px; background:#004080; color:white; border:none; cursor:pointer; }
+    .section, .stats, .tender-list, .competitors, .insights { background:#fff; margin:20px auto; padding:20px; width:85%; border:1px solid #ddd; }
+    h3 { color:#004080; }
+    ul { list-style-type:none; padding:0; }
+    li { padding:8px 0; border-bottom:1px solid #eee; }
+    .upi img { width:200px; }
+    footer { background:#004080; color:white; padding:15px; text-align:center; margin-top:30px; }
+    button { margin-top:10px; padding:8px 15px; background:#ff9933; color:white; border:none; cursor:pointer; }
+    .icon { margin-right:8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TENDER GUIDER</h1>
+    <p>Your Tender Guider to Valuable Opportunities!</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Find Tenders</a>
+    <a href="#">MSME Registration</a>
+    <a href="#">Bid Insights</a>
+    <a href="#">Audit</a>
+  </nav>
+
+  <div class="banner">
+    <h2>Discover & Apply for Tenders in Karnataka</h2>
+    <p>AI-Powered Tender Insights — We Provide, You Decide.</p>
+    <div class="search">
+      <select id="district"><option>Select District</option><option>Bengaluru</option><option>Mysuru</option><option>Mangaluru</option></select>
+      <select id="category">
+        <option>Select Category</option>
+        <option>🏗 Construction</option>
+        <option>💻 IT Software</option>
+        <option>🏥 Healthcare</option>
+        <option>⚡ Electrical</option>
+        <option>🚚 Transport</option>
+        <option>📊 Consultancy</option>
+      </select>
+      <input type="text" placeholder="Enter Keywords">
+      <button onclick="searchTenders()">Search</button>
+    </div>
+    <div>
+      <button>AI Bid Insights</button>
+      <button>Download Tender Docs</button>
+      <button>Private Tenders</button>
+    </div>
+  </div>
+
+  <div id="results">
+    <h3>Search Results Will Appear Here</h3>
+  </div>
+
+  <div class="section">
+    <h3>New to Tenders? MSME Registration</h3>
+    <p>Easy MSME Apply | EMD Benefits | Get Started Now</p>
+    <button>Apply for MSME</button>
+  </div>
+
+  <div class="section">
+    <h3>Advertise Here</h3>
+    <p>Reach Contractors & Buyers Across Karnataka</p>
+    <button>Learn More</button>
+  </div>
+
+  <div class="section">
+    <h3>Top Tender Sellers</h3>
+    <button>Tap to View</button>
+    <h3>Top Tender Buyers</h3>
+    <button>Tap to View</button>
+  </div>
+
+  <div class="stats">
+    <h3>Total Tenders: 284 | Govt: 190 | Private: 94</h3>
+
+ <div class="competitors">
+   <h3>Bid Insights & Competitors</h3>
+    <ul>
+      <li>Competitor XYZ | Winning Chance: 68% | Roads ₹24,20,000</li>
+      <li>Competitor ABC | Winning Chance: 55% | Software Upgrade ₹18,00,000</li>
+    </ul>
+    <button>View More</button>
+  </div>
+
+  <div class="insights">
+    <h3>AI Insights</h3>
+    <p>Smart Tender Guidance & Bid Analysis</p>
+    <ul>
+      <li>☑ Free AI Bid Analyzer Tool</li>
+      <li>☑ Integrated with official portals</li>
+    </ul>
+    <button>Get Full Access</button>
+  </div>
+
+  <div class="section upi">
+    <h3>Pay-per-use via UPI</h3>
+    <p>Scan the QR below to pay ₹50 for AI Tender Insights:</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/UPI-QR-code-example.png" alt="UPI QR Code">
+  </div>
+
+  <footer>
+    <p>TENDER GUIDER | Secure & Legit | Free Domain</p>
+    <p>We are a tender guiding service, not a bidder. All applications are to be submitted via official government portals.</p>
+  </footer>
+
+  <script>
+    function searchTenders() {
+      const district = document.getElementById("district").value;
+      const category = document.getElementById("category").value;
+      const resultsDiv = document.getElementById("results");
+
+      if (district === "Select District" || category === "Select Category") {
+        resultsDiv.innerHTML = "<p>Please select both district and category.</p>";
+        return;
+      }
+
+      resultsDiv.innerHTML = `
+        <h3>Showing results for ${district} - ${category}</h3>
+        <ul>
+          <li>${district} ${category} Tender #1 (Dummy Data)</li>
+          <li>${district} ${category} Tender #2 (Dummy Data)</li>
+          <li>${district} ${category} Tender #3 (Dummy Data)</li>
+        </ul>
+      `;
+    }
+  </script>
+</body>
+</html>
